@@ -1,0 +1,85 @@
+- # This line includes header partial
+- # Note the title-variable sent to partial
+= Haml::Engine.new(File.read(File.expand_path(File.dirname(__FILE__)) + '\partials\_header.haml')).render(Object.new, title: 'Front end development. Design thinking. - Mika Lindell')
+%header.row
+	.large-12.small-12.columns
+		%nav.top-bar
+			%ul.title-area
+				%li.name
+					%h1
+						%a(href="#") 
+							Mika Lindell
+			%section.top-bar-section
+				%ul.right
+					%li 
+						%a(href="#contact") 
+							Contact
+.row
+	.large-12.small-12.columns
+		%h1
+			Front end development.
+			%br
+			Design thinking.
+		%h2
+			Interaction design and technical implementation for web & mobile.
+			%br
+			With an eye for what looks & runs beautiful.
+.row
+	.large-12.small-12.columns
+.row
+	.large-12.small-12.columns
+		%h3
+			Motion controlled drum machine
+		%p
+			Proof of concept for Android phones
+		%a.small.button.radius
+			Go to case study
+.row
+	.large-12.small-12.columns
+.row
+	.large-12.small-12.columns
+		%h3
+			What's wrong with Wordpress?
+		%p
+			I'm talking about its default theme to be specific
+		%a.small.button.radius
+			Go to case study
+.row
+	.large-12.small-12.columns
+		%h3
+			Who?
+.row
+	.large-12.small-12.columns
+		%p
+			I go for simple and elegant solutions. For me, high quality is 
+			matter of principle. Though my strengths lie within interaction 
+			design and technical implementation, I know a little bit of 
+			everything. Thus I can see things in a broader perspective. 
+
+			I'm pretty good on my own, but at my best I'm when teamed 
+			up with talented people from other disciplines. 
+			I believe in team efforts.
+.row
+	.large-12.small-12.columns
+		%h3
+			Contact
+.row
+	.large-6.small-12.columns
+		%form
+			%label(for="email")
+				Email:
+			%input(name="email" type="email")
+			%label(for="message")
+				Message:
+			%textarea(name="message")
+			%input.button.small.radius.success(type="submit" value=" Submit ")
+	.large-1.small-12.columns
+		%p Or
+	.large-5.small-12.columns
+		%a.button.radius(href="#") via LinkedIn
+		%a.button.radius(href="#") via Skype
+.row
+
+
+- # This line includes footer partial
+= Haml::Engine.new(File.read(File.expand_path(File.dirname(__FILE__)) + '\partials\_footer.haml')).render()
