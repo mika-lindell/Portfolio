@@ -17,17 +17,18 @@
 								Contact
 %div.bg-sky-blue
 	.row
-		.large-12.small-12.columns
-			%h1.slogan
+		.large-12.small-12.columns.slogan
+			%h1
 				Front end development.
 				%br
 				Design thinking.
-			%h2.slogan
+			%h2
 				Interaction design and technical implementation for web & mobile.
 				%br
 				With an eye for what looks & runs beautiful.
-.row
-	.large-12.small-12.columns
+.showcase-cover
+	.dimmer
+	%img(src="./img/android_cover.jpg" alt="Motion controlled drum machine")
 .row
 	.large-12.small-12.columns
 		%h3
@@ -36,8 +37,9 @@
 			Proof of concept for Android phones
 		%a.small.button.radius
 			Go to case study
-.row
-	.large-12.small-12.columns
+.showcase-cover
+	.dimmer
+	%img(src="./img/wp_cover.jpg" alt="What's wrong with Wordpress?")
 .row
 	.large-12.small-12.columns
 		%h3
@@ -61,7 +63,7 @@
 			I'm pretty good on my own, but at my best I'm when teamed 
 			up with talented people from other disciplines. 
 			I believe in team efforts.
-.row
+.row#contact
 	.large-12.small-12.columns
 		%h3
 			Contact
@@ -78,8 +80,10 @@
 	.large-1.small-12.columns
 		%p Or
 	.large-5.small-12.columns
-		%a.button.radius(href="#") via LinkedIn
-		%a.button.radius(href="#") via Skype
+		.row
+			%a.button.radius.expand(href="#") via LinkedIn
+		.row
+			%a.button.radius.expand(href="#") via Skype
 .row
 
 

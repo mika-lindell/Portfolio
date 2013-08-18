@@ -6,16 +6,31 @@
 	background-color: $_sky-blue;
 }
 
-.slogan{
-	color: #fff;
-	font-weight: normal;
-}
-
-h2.slogan{
-	font-size: emCalc(18);
-	margin-bottom: emCalc(50);
-}
-
 .top-bar-height{
 	height: $topbar-height;
+}
+
+.slogan{
+
+	margin-top: emCalc(40);
+	margin-bottom: emCalc(80);
+
+	h1, h2{
+		color: #fff;
+		font-weight: normal;
+	}
+	h2{
+		font-size: emCalc(18);
+	}
+}
+
+.showcase-cover{
+	position: relative;
+	text-align: center;
+	.dimmer{
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		background-image: url('../img/1pixel_black_70.png');
+	}
 }
