@@ -8,10 +8,14 @@
 @import "../foundation/scss/normalize.scss";
 
 // This includes all of the foundation global elements that are needed to work with any of the other files.
-@import "../foundation/scss/foundation/variables";
+// It's the default file, so I dare not to change it
+// Copied its contents to _settings.scss instead
+//@import "../foundation/scss/foundation/variables";
 
 // Override foundation default variables where necessary
-@import "./partials/settings.scss";
+@import "./partials/_settings.scss";
+// Import all custom styling
+@import "./partials/_custom.scss";
 
 // Foundation Components
 @import
@@ -51,3 +55,4 @@
   //"../foundation/scss/foundation/components/tooltips",
   //"../foundation/scss/foundation/components/dropdown"
   ;
+

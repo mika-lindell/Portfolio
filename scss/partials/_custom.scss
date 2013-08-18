@@ -1,0 +1,21 @@
+.bg-dark-grey{
+	background-color: $_dark-grey;
+}
+
+.bg-sky-blue{
+	background-color: $_sky-blue;
+}
+
+.slogan{
+	color: #fff;
+	font-weight: normal;
+}
+
+h2.slogan{
+	font-size: emCalc(18);
+	margin-bottom: emCalc(50);
+}
+
+.top-bar-height{
+	height: $topbar-height;
+}
