@@ -32,8 +32,20 @@
 
 	.me{
 		text-align: center;
+		position: relative;
+		height: emCalc(342);
+		.tip-hotspot{
+			position: absolute;
+			height: emCalc(300);
+			width: emCalc(200);
+			left: 50%;
+			margin-left: emCalc(-100);
+		}
 		img{
+			position: absolute;
 			max-width: none;
+	  	left: 50%;
+	  	margin-left: emCalc(-232);
 		}
 	}
 }
@@ -70,6 +82,20 @@
 #contact, #profile{
 	padding-top: emCalc(50px);
 	padding-bottom: emCalc(50px);
+	input[type="email"], textarea{
+		color: black;
+	}
+}
+
+#profile img{margin-top: emCalc(-25);}
+
+#contact{
+	.or p{
+		text-align: center;
+		font-size: emCalc(20px);
+		vertical-align: middle;
+		margin-top: emCalc(50px);
+	}
 }
 
 #contact h3, #profile h3{ font-weight: normal;}

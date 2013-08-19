@@ -342,7 +342,7 @@ $header-font-family: "Open Sans", Helvetica, Arial, sans-serif;
 // $form-label-font-size: emCalc(14);
 // $form-label-font-weight: 500;
 // $form-label-font-color: lighten(#000, 30%);
-// $form-label-bottom-margin: emCalc(3);
+$form-label-bottom-margin: emCalc(15);
 // $input-font-family: inherit;
 // $input-font-color: rgba(0,0,0,0.75);
 // $input-font-size: emCalc(14);
@@ -1271,10 +1271,10 @@ $header-font-family: "Open Sans", Helvetica, Arial, sans-serif;
 // $has-tip-font-color-hover: $primary-color;
 // $has-tip-cursor-type: help;
 
-// $tooltip-padding: emCalc(8);
-// $tooltip-bg: #000;
+$tooltip-padding: emCalc(20);
+$tooltip-bg: $_dark-grey;
 // $tooltip-font-size: emCalc(15);
-// $tooltip-font-weight: bold;
+$tooltip-font-weight: normal;
 // $tooltip-font-color: #fff;
 // $tooltip-line-height: 1.3;
 // $tooltip-close-font-size: emCalc(10);
@@ -1282,7 +1282,7 @@ $header-font-family: "Open Sans", Helvetica, Arial, sans-serif;
 // $tooltip-close-font-color: #888;
 // $tooltip-font-size-sml: emCalc(14);
 // $tooltip-radius: $global-radius;
-// $tooltip-pip-size: 5px;
+$tooltip-pip-size: 10px;
 
 //
 // Top Bar Variables
