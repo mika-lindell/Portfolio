@@ -12,14 +12,15 @@
   </head>
   <body></body>
 </html>
-<header class='top-bar-height bg-dark-grey'>
+<header class='bg-dark-grey' id='top-bar'>
   <div class='row'>
     <div class='large-12 small-12 columns'>
       <nav class='top-bar'>
         <ul class='title-area'>
           <li class='name'>
             <h1>
-              <a href='#'>
+              <a href='index.html'>
+                <img alt='Icon' class='icon' height='25' src='./img/home.png' width='25'>
                 Mika Lindell
               </a>
             </h1>
@@ -38,27 +39,36 @@
     </div>
   </div>
 </header>
-<div class='bg-sky-blue'>
+<div class='welcome bg-sky-blue'>
   <div class='row'>
-    <div class='large-12 small-12 columns slogan'>
+    <div class='large-7 small-12 columns slogan'>
       <h1>
         Front end development.
         <br>
         Design thinking.
       </h1>
       <h2>
-        Interaction design and technical implementation for web & mobile.
+        Interaction design and technical implementation
+        for web and mobile.
         <br>
         With an eye for what looks & runs beautiful.
       </h2>
     </div>
+    <div class='large-5 small-12 columns me'>
+      <div>
+        <img alt='Hi there! ( Mika smiling ;) ).' height='342' src='./img/welcome.png' width='475'>
+      </div>
+    </div>
   </div>
 </div>
 <div class='showcase-cover'>
+  <img alt='User interface work in progress.' class='cover' height='300' src='./img/android_cover.jpg' width='1600'>
   <div class='dimmer'></div>
-  <img alt='Motion controlled drum machine' src='./img/android_cover.jpg'>
+  <a class='play' href='#'>
+    <img alt='Play a video.' height='153' src='./img/play.png' width='152'>
+  </a>
 </div>
-<div class='row'>
+<div class='row showcase-title'>
   <div class='large-12 small-12 columns'>
     <h3>
       Motion controlled drum machine
@@ -72,10 +82,10 @@
   </div>
 </div>
 <div class='showcase-cover'>
+  <img alt='Two Wordpress themes next to each other.' class='cover' height='300' src='./img/wp_cover.jpg' width='1600'>
   <div class='dimmer'></div>
-  <img alt="What's wrong with Wordpress?" src='./img/wp_cover.jpg'>
 </div>
-<div class='row'>
+<div class='row showcase-title'>
   <div class='large-12 small-12 columns'>
     <h3>
       What's wrong with Wordpress?
@@ -88,60 +98,72 @@
     </a>
   </div>
 </div>
-<div class='row'>
-  <div class='large-12 small-12 columns'>
-    <h3>
-      Who?
-    </h3>
-  </div>
-</div>
-<div class='row'>
-  <div class='large-12 small-12 columns'>
-    <p>
-      I go for simple and elegant solutions. For me, high quality is
-      matter of principle. Though my strengths lie within interaction
-      design and technical implementation, I know a little bit of
-      everything. Thus I can see things in a broader perspective.
-      I'm pretty good on my own, but at my best I'm when teamed
-      up with talented people from other disciplines.
-      I believe in team efforts.
-    </p>
-  </div>
-</div>
-<div class='row' id='contact'>
-  <div class='large-12 small-12 columns'>
-    <h3>
-      Contact
-    </h3>
-  </div>
-</div>
-<div class='row'>
-  <div class='large-6 small-12 columns'>
-    <form>
-      <label for='email'>
-        Email:
-      </label>
-      <input name='email' type='email'>
-      <label for='message'>
-        Message:
-      </label>
-      <textarea name='message'></textarea>
-      <input class='button small radius success' type='submit' value=' Submit '>
-    </form>
-  </div>
-  <div class='large-1 small-12 columns'>
-    <p>Or</p>
-  </div>
-  <div class='large-5 small-12 columns'>
-    <div class='row'>
-      <a class='button radius expand' href='#'>via LinkedIn</a>
+<div class='bg-light-grey' id='profile'>
+  <div class='row'>
+    <div class='large-7 small-12 columns'>
+      <div class='row'>
+        <div class='large-12 small-12 columns'>
+          <h3>
+            Who?
+          </h3>
+        </div>
+      </div>
+      <div class='row'>
+        <p class='large-12 small-12 columns'>
+          I go for simple and elegant solutions. For me, high quality is
+          matter of principle. Though my strengths lie within interaction
+          design and technical implementation, I know a little bit of
+          everything. Thus I can see things in a broader perspective.
+          I'm pretty good on my own, but at my best I'm when teamed
+          up with talented people from other disciplines.
+          I believe in team efforts.
+        </p>
+      </div>
     </div>
-    <div class='row'>
-      <a class='button radius expand' href='#'>via Skype</a>
+    <div class='large-5 small-12 columns'>
+      <img alt='Mika pointing at previous paragraph.' class='right' height='220' src='./img/profile.png' width='300'>
     </div>
   </div>
 </div>
-<div class='row'></div>
+<div class='bg-dark-grey' id='contact'>
+  <div class='row'>
+    <div class='large-12 small-12 columns'>
+      <h3>
+        Contact
+      </h3>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='large-6 small-12 columns'>
+      <form>
+        <label for='email'>
+          Email:
+        </label>
+        <input name='email' type='email'>
+        <label for='message'>
+          Message:
+        </label>
+        <textarea name='message'></textarea>
+        <input class='button small radius success' type='submit' value=' Submit '>
+      </form>
+    </div>
+    <div class='large-1 small-12 columns'>
+      <p>Or</p>
+    </div>
+    <div class='large-5 small-12 columns'>
+      <div class='row'>
+        <div class='large-12 small-12 columns'>
+          <a class='button radius expand' href='#'>via LinkedIn</a>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='large-12 small-12 columns'>
+          <a class='button radius expand' href='#'>via Skype</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <script>
   document.write('<script src=' +
   ('__proto__' in {} ? 'lib/zepto' : 'lib/jquery') +

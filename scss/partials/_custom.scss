@@ -1,32 +1,59 @@
 .bg-dark-grey{
 	background-color: $_dark-grey;
+	*{color: $_light-grey;}
 }
 
 .bg-sky-blue{
 	background-color: $_sky-blue;
+	*{color: white;}
 }
 
-.top-bar-height{
+.bg-light-grey{
+	background-color: $_light-grey;
+}
+
+#top-bar{
 	height: $topbar-height;
-}
-
-.slogan{
-
-	margin-top: emCalc(40);
-	margin-bottom: emCalc(80);
-
-	h1, h2{
-		color: #fff;
-		font-weight: normal;
-	}
-	h2{
-		font-size: emCalc(18);
+	img.icon{
+		vertical-align: text-bottom;
 	}
 }
 
+.welcome{
+	.slogan{
+		padding-top: emCalc(30);
+		h1, h2{
+			font-weight: normal;
+		}
+		h2{
+			font-size: emCalc(18);
+		}
+	}
+
+	.me{
+		text-align: center;
+		img{
+			max-width: none;
+		}
+	}
+}
 .showcase-cover{
 	position: relative;
-	text-align: center;
+	height: emCalc(300);
+	img.cover{
+		position: absolute;
+		max-width: none;
+	  left: 50%;
+	  margin-left: emCalc(-800);
+	}
+	a.play{
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin-left: emCalc(-76);
+		margin-top: emCalc(-76);
+		img{border: none;}
+	}
 	.dimmer{
 		position: absolute;
 		height: 100%;
@@ -34,3 +61,15 @@
 		background-image: url('../img/1pixel_black_70.png');
 	}
 }
+
+.showcase-title{
+	padding-top: emCalc(20px);
+	padding-bottom: emCalc(20px);
+}
+
+#contact, #profile{
+	padding-top: emCalc(50px);
+	padding-bottom: emCalc(50px);
+}
+
+#contact h3, #profile h3{ font-weight: normal;}

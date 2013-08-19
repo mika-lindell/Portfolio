@@ -1,35 +1,42 @@
 - # This line includes header partial
 - # Note the title-variable sent to partial
 = Haml::Engine.new(File.read(File.expand_path(File.dirname(__FILE__)) + '\partials\_header.haml')).render(Object.new, title: 'Front end development. Design thinking. - Mika Lindell')
-%header.top-bar-height.bg-dark-grey
+%header#top-bar.bg-dark-grey
 	.row
 		.large-12.small-12.columns
 			%nav.top-bar
 				%ul.title-area
 					%li.name
 						%h1
-							%a(href="#") 
+							%a(href="index.html") 
+								%img.icon(src="./img/home.png" alt="Icon" width="25" height="25")
 								Mika Lindell
 				%section.top-bar-section
 					%ul.right
 						%li 
 							%a(href="#contact") 
 								Contact
-%div.bg-sky-blue
+%div.welcome.bg-sky-blue
 	.row
-		.large-12.small-12.columns.slogan
+		.large-7.small-12.columns.slogan
 			%h1
 				Front end development.
 				%br
 				Design thinking.
 			%h2
-				Interaction design and technical implementation for web & mobile.
+				Interaction design and technical implementation
+				for web and mobile.
 				%br
 				With an eye for what looks & runs beautiful.
+		.large-5.small-12.columns.me
+			%div
+				%img(src="./img/welcome.png" alt="Hi there! ( Mika smiling ;) )." width="475" height="342")
 .showcase-cover
+	%img.cover(src="./img/android_cover.jpg" alt="User interface work in progress." width="1600" height="300")
 	.dimmer
-	%img(src="./img/android_cover.jpg" alt="Motion controlled drum machine")
-.row
+	%a.play(href="#")
+		%img(src="./img/play.png" alt="Play a video." width="152" height="153")
+.row.showcase-title
 	.large-12.small-12.columns
 		%h3
 			Motion controlled drum machine
@@ -38,9 +45,9 @@
 		%a.small.button.radius
 			Go to case study
 .showcase-cover
+	%img.cover(src="./img/wp_cover.jpg" alt="Two Wordpress themes next to each other." width="1600" height="300")
 	.dimmer
-	%img(src="./img/wp_cover.jpg" alt="What's wrong with Wordpress?")
-.row
+.row.showcase-title
 	.large-12.small-12.columns
 		%h3
 			What's wrong with Wordpress?
@@ -48,44 +55,49 @@
 			I'm talking about its default theme to be specific
 		%a.small.button.radius
 			Go to case study
-.row
-	.large-12.small-12.columns
-		%h3
-			Who?
-.row
-	.large-12.small-12.columns
-		%p
-			I go for simple and elegant solutions. For me, high quality is 
-			matter of principle. Though my strengths lie within interaction 
-			design and technical implementation, I know a little bit of 
-			everything. Thus I can see things in a broader perspective. 
+#profile.bg-light-grey
+	.row
+		.large-7.small-12.columns
+			.row
+				.large-12.small-12.columns
+					%h3
+						Who?
+			.row
+				%p.large-12.small-12.columns
+					I go for simple and elegant solutions. For me, high quality is 
+					matter of principle. Though my strengths lie within interaction 
+					design and technical implementation, I know a little bit of 
+					everything. Thus I can see things in a broader perspective. 
 
-			I'm pretty good on my own, but at my best I'm when teamed 
-			up with talented people from other disciplines. 
-			I believe in team efforts.
-.row#contact
-	.large-12.small-12.columns
-		%h3
-			Contact
-.row
-	.large-6.small-12.columns
-		%form
-			%label(for="email")
-				Email:
-			%input(name="email" type="email")
-			%label(for="message")
-				Message:
-			%textarea(name="message")
-			%input.button.small.radius.success(type="submit" value=" Submit ")
-	.large-1.small-12.columns
-		%p Or
-	.large-5.small-12.columns
-		.row
-			%a.button.radius.expand(href="#") via LinkedIn
-		.row
-			%a.button.radius.expand(href="#") via Skype
-.row
-
+					I'm pretty good on my own, but at my best I'm when teamed 
+					up with talented people from other disciplines. 
+					I believe in team efforts.
+		.large-5.small-12.columns
+			%img.right(src="./img/profile.png" alt="Mika pointing at previous paragraph." width="300" height="220")
+#contact.bg-dark-grey
+	.row
+		.large-12.small-12.columns
+			%h3
+				Contact
+	.row
+		.large-6.small-12.columns
+			%form
+				%label(for="email")
+					Email:
+				%input(name="email" type="email")
+				%label(for="message")
+					Message:
+				%textarea(name="message")
+				%input.button.small.radius.success(type="submit" value=" Submit ")
+		.large-1.small-12.columns
+			%p Or
+		.large-5.small-12.columns
+			.row
+				.large-12.small-12.columns
+					%a.button.radius.expand(href="#") via LinkedIn
+			.row
+				.large-12.small-12.columns
+					%a.button.radius.expand(href="#") via Skype
 
 - # This line includes footer partial
 = Haml::Engine.new(File.read(File.expand_path(File.dirname(__FILE__)) + '\partials\_footer.haml')).render()
