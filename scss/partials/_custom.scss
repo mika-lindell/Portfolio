@@ -13,13 +13,6 @@
 	background-color: $_light-grey;
 }
 
-#top-bar{
-	height: $topbar-height;
-	img.icon{
-		vertical-align: text-bottom;
-	}
-}
-
 body{overflow-x:hidden;}
 
 .absolute-center{
@@ -28,6 +21,19 @@ body{overflow-x:hidden;}
 	top: 50%;
 }
 
+#top-bar{
+	height: $topbar-height;
+	img.icon{
+		vertical-align: text-bottom;
+	}
+}
+
+.top-bar{
+	.name h1 a{
+		width: 100%;
+		padding: 0;
+	}
+}
 .welcome{
 	.slogan{
 		padding-top: emCalc(30);
@@ -135,8 +141,8 @@ body{overflow-x:hidden;}
 
 #contact{
 	.contact-buttons{
-		margin-top: emCalc(30);
-		margin-bottom: emCalc(30);
+		margin-top: emCalc(60);
+		margin-bottom: emCalc(60);
 	}
 	.or{
 		text-align: center;
