@@ -1,3 +1,4 @@
+
 .bg-dark-grey{
 	background-color: $_dark-grey;
 	*{color: $_light-grey;}
@@ -17,6 +18,20 @@
 	img.icon{
 		vertical-align: text-bottom;
 	}
+}
+
+@mixin transition($properties){
+	transition: $properties;
+	-webkit-transition: $properties;
+	-moz-transition: $properties;
+}
+
+body{overflow-x:hidden;}
+
+.absolute-center{
+	position: absolute;
+	left: 50%;
+	top: 50%;
 }
 
 .welcome{
@@ -49,28 +64,72 @@
 		}
 	}
 }
+
+/*.showcase-cover.title{margin-top: emCalc(50);}*/
 .showcase-cover{
 	position: relative;
+	background-color: #000;
 	height: emCalc(300);
+	.video-cover{
+		position: absolute;
+		height: emCalc(300);
+		width: 100%;
+	}
 	img.cover{
 		position: absolute;
 		max-width: none;
 	  left: 50%;
 	  margin-left: emCalc(-960);
 	}
-	a.play{
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		margin-left: emCalc(-76);
-		margin-top: emCalc(-76);
-		img{border: none;}
+
+	#title-video-container{
+		.video-centering{
+			max-width: emCalc(786);
+			margin:auto;
+			.flex-video{
+				overflow: visible;
+			}
+		}
+		.close-video{
+			position: absolute;
+			right: emCalc(20);
+			top: emCalc(20);
+			font-size: emCalc(20);
+			font-weight: bold;
+		}
 	}
+}
+
+.cover-collapsed{
+	height: emCalc(300);
+}
+.cover-expanded{
+	height: auto;
+}
+
+.play, .loader{
+	img{border: none;}
+}
+.play{
+	margin-left: emCalc(-76);
+	margin-top: emCalc(-76);
+	opacity: 0.6;
+	@include transition(opacity 0.3s);
+	cursor: pointer;
+	z-index: 1;
+	&:hover{
+		opacity:1;
+	}
+}
+.loader{
+	margin-left: emCalc(-21);
+	margin-top: emCalc(-21);
 }
 
 .showcase-title{
 	padding-top: emCalc(20px);
 	padding-bottom: emCalc(20px);
+	p {color: $_dark-grey;}
 }
 
 #contact, #profile{
@@ -84,12 +143,24 @@
 #profile img{margin-top: emCalc(-25);}
 
 #contact{
-	.or p{
+	.contact-buttons{
+		margin-top: emCalc(30);
+		margin-bottom: emCalc(30);
+	}
+	.or{
 		text-align: center;
-		font-size: emCalc(20px);
+		font-size: emCalc(23px);
 		vertical-align: middle;
-		margin-top: emCalc(50px);
+		margin-top: emCalc(12);
 	}
 }
 
 #contact h3, #profile h3{ font-weight: normal;}
+
+.recommended{
+	padding: emCalc(10) 0;
+	h4{
+		font-weight:normal;
+		font-size: emCalc(20);
+	}
+}

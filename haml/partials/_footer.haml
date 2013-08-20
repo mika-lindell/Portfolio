@@ -1,8 +1,47 @@
+#contact.bg-dark-grey
+	.row
+		.large-12.small-12.columns
+			%h3
+				Contact
+	.row.contact-buttons
+		.large-5.small-12.columns
+			%a.button.radius.expand(href="mailto:mika.lindell82@gmail.com")
+				%img(src="./img/mail.png" alt="Envelope" width="48" height="48")
+				via Email
+		.large-2.small-12.columns
+			%p.or Or
+		.large-5.small-12.columns
+			%a.button.radius.expand(href="http://www.linkedin.com/pub/mika-lindell/69/780/7b2")
+				%img(src="./img/linkedin.png" alt="LinkedIn logo" width="48" height="48")
+				via LinkedIn
+		- # .large-6.small-12.columns
+		- # 	%form
+		- # 		%label(for="email")
+		- # 			Email:
+		- # 		%input(name="email" type="email")
+		- # 		%label(for="message")
+		- # 			Message:
+		- # 		%textarea(name="message")
+		- # 		%input.button.small.radius.success.right(type="submit" value=" Submit ")
+		- # .large-1.small-12.columns.or
+		- # 	%p Or
+		- # .large-5.small-12.columns
+		- # 	.row
+		- # 		.large-12.small-12.columns
+		- # 			%a.button.radius.expand(href="#")
+		- # 				%img(src="./img/linkedin.png" alt="LinkedIn logo" width="48" height="48")
+		- # 				via LinkedIn
+		- # 	.row
+		- # 		.large-12.small-12.columns
+		- # 			%a.button.radius.expand(href="#")
+		- # 				%img(src="./img/skype.png" alt="Skype logo" width="48" height="48")
+		- # 				via Skype
+
 :javascript
 	document.write('<script src=' +
 	('__proto__' in {} ? 'lib/zepto' : 'lib/jquery') +
 	'.min.js><\/script>')
 
-%script(src="min/foundation/foundation.min.js")
+%script(src="min/compiled/app.min.js")
 :javascript
 	$(document).foundation();

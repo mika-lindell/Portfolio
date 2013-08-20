@@ -1,0 +1,24 @@
+!!! 5
+%html
+	- # This line includes header partial
+	- # Note the title-variable sent to partial
+	= Haml::Engine.new(File.read(File.expand_path(File.dirname(__FILE__)) + '\partials\_header.haml')).render(Object.new, title: 'Front end development. Design thinking. - Mika Lindell')
+	%article
+		%header
+			.showcase-cover
+				%img.cover(src="./img/wp_cover.jpg" alt="Two Wordpress themes next to each other." width="1920" height="300")
+			.row.showcase-title
+				.large-12.small-12.columns
+					%h3
+						What's wrong with Wordpress?
+		%section.content
+			.row
+				.large-12.small-12.columns
+		%footer
+			= Haml::Engine.new(File.read(File.expand_path(File.dirname(__FILE__)) + '\partials\_recommended_title.haml')).render()
+			- # Android
+			- args = {title: 'Motion controlled drum machine', subtitle: 'Proof of concept for Android phones', url: 'motion-controlled-drum-machine.html', cover: 'android_cover.jpg', cover_alt: 'User interface work in progress.', video_id: 'KWU_2DXhRhc', elem_id: 'android-video' }
+			= Haml::Engine.new(File.read(File.expand_path(File.dirname(__FILE__)) + '\partials\_showcase_video.haml')).render(Object.new, args)
+
+	- # This line includes footer partial
+	= Haml::Engine.new(File.read(File.expand_path(File.dirname(__FILE__)) + '\partials\_footer.haml')).render()
