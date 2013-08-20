@@ -27,7 +27,7 @@ class videoTransitionEffects
 		else
 			newOpacity = 0
 
-		@cover.animate(opacity: newOpacity, 'fast', 'ease-out')
+		@cover.animate(opacity: newOpacity, 'fast', ()->)
 
 		if not @expanded
 			this.switchClass(@classExpanded, @classCollapsed)
@@ -48,5 +48,6 @@ class videoTransitionEffects
 video = new videoTransitionEffects $('#android-video')
 
 bindThese = $('.toggle-video')
-for index, item of bindThese
+for item in bindThese
+	console.log(item)
 	item.onclick = () -> video.toggle()

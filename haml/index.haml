@@ -5,50 +5,50 @@
 	- args = {title: 'Front end development. Design thinking. - Mika Lindell'}
 	= Haml::Engine.new(File.read(File.expand_path(File.dirname(__FILE__)) + '\partials\_header.haml')).render(Object.new, args)
 	%body	
-	- # This line includes top-menu partial
-	= Haml::Engine.new(File.read(File.expand_path(File.dirname(__FILE__)) + '\partials\_menu_top.haml')).render()
-	%div.welcome.bg-sky-blue
-		.row
-			.large-7.small-12.columns.slogan
-				%h1
-					Front end development.
-					%br
-					Design thinking.
-				%h2
-					Interaction design and technical implementation
-					for web and mobile.
-					%br
-					With an eye for what looks & runs beautiful.
-			.large-5.small-12.columns.me
-				%div
-					%img(src="./img/welcome.png" alt="Hi there! ( Mika smiling ;) )." width="475" height="342")
-					%div.tip-left.tip-hotspot(data-tooltip data-options="disable-for-touch:true" data-width="250" title="Yes, I sometimes smile at work. That's because I love what I'm doing!")
+		- # This line includes top-menu partial
+		= Haml::Engine.new(File.read(File.expand_path(File.dirname(__FILE__)) + '\partials\_menu_top.haml')).render()
+		%div.welcome.bg-sky-blue
+			.row
+				.large-7.small-12.columns.slogan
+					%h1
+						Front end development.
+						%br
+						Design thinking.
+					%h2
+						Interaction design and technical implementation
+						for web and mobile.
+						%br
+						With an eye for what looks & runs beautiful.
+				.large-5.small-12.columns.me
+					%div
+						%img(src="./img/welcome.png" alt="Hi there! ( Mika smiling ;) )." width="475" height="342")
+						%div.tip-left.tip-hotspot(data-tooltip data-options="disable-for-touch:true" data-width="250" title="Yes, I sometimes smile at work. That's because I love what I'm doing!")
 
-	- # Project showcase partials
-	- # Android
-	- args = {title: 'Motion controlled drum machine', subtitle: 'Proof of concept for Android phones', url: 'motion-controlled-drum-machine.html', cover: 'android_cover.jpg', cover_alt: 'User interface work in progress.', video_id: 'KWU_2DXhRhc', elem_id: 'android-video' }
-	= Haml::Engine.new(File.read(File.expand_path(File.dirname(__FILE__)) + '\partials\_showcase_video.haml')).render(Object.new, args)
-	- # Wordpress
-	- args = {title: "What's wrong with Wordpress?", subtitle: "I'm talking about its default theme to be specific", url: 'whats-wrong-with-wordpress.html', cover: 'wp_cover.jpg', cover_alt: 'Two Wordpress themes next to each other.'}
-	= Haml::Engine.new(File.read(File.expand_path(File.dirname(__FILE__)) + '\partials\_showcase.haml')).render(Object.new, args)
+		- # Project showcase partials
+		- # Android
+		- args = {title: 'Motion controlled drum machine', subtitle: 'Proof of concept for Android phones', url: 'motion-controlled-drum-machine.html', cover: 'android_cover.jpg', cover_alt: 'User interface work in progress.', video_id: 'KWU_2DXhRhc', elem_id: 'android-video' }
+		= Haml::Engine.new(File.read(File.expand_path(File.dirname(__FILE__)) + '\partials\_showcase_video.haml')).render(Object.new, args)
+		- # Wordpress
+		- args = {title: "What's wrong with Wordpress?", subtitle: "I'm talking about its default theme to be specific", url: 'whats-wrong-with-wordpress.html', cover: 'wp_cover.jpg', cover_alt: 'Two Wordpress themes next to each other.'}
+		= Haml::Engine.new(File.read(File.expand_path(File.dirname(__FILE__)) + '\partials\_showcase.haml')).render(Object.new, args)
 
-	#profile.bg-light-grey
-		.row
-			.large-12.small-12.columns
-				%h3
-					Who?
-		.row
-			.large-7.small-12.columns
-				%p
-					I go for simple and elegant solutions. For me, high quality is 
-					matter of principle. Though my strengths lie within interaction 
-					design and technical implementation, I know a little bit of 
-					everything. Thus, I can see things in a broader perspective. 
-				%p
-					I'm pretty good on my own, but at my best I'm when teamed 
-					up with talented people from other disciplines. 
-					I believe in team efforts.
-			.large-5.small-12.columns.hide-for-small
-				%img.right.tip-left(src="./img/profile.png" alt="Mika pointing at previous paragraph." width="300" height="220" data-tooltip data-options="disable-for-touch:true" data-width="250" title="On my free time I play Battlefield, jog or maybe go swimming. Sometimes I dare to read a book! I also do bunch of other stuff.")
-	- # This line includes footer partial
-	= Haml::Engine.new(File.read(File.expand_path(File.dirname(__FILE__)) + '\partials\_footer.haml')).render()
+		#profile.bg-light-grey
+			.row
+				.large-12.small-12.columns
+					%h3
+						Who?
+			.row
+				.large-7.small-12.columns
+					%p
+						I go for simple and elegant solutions. For me, high quality is 
+						matter of principle. Though my strengths lie within interaction 
+						design and technical implementation, I know a little bit of 
+						everything. Thus, I can see things in a broader perspective. 
+					%p
+						I'm pretty good on my own, but at my best I'm when teamed 
+						up with talented people from other disciplines. 
+						I believe in team efforts.
+				.large-5.small-12.columns.hide-for-small
+					%img.right.tip-left(src="./img/profile.png" alt="Mika pointing at previous paragraph." width="300" height="220" data-tooltip data-options="disable-for-touch:true" data-width="250" title="On my free time I play Battlefield, jog or maybe go swimming. Sometimes I dare to read a book! I also do bunch of other stuff.")
+		- # This line includes footer partial
+		= Haml::Engine.new(File.read(File.expand_path(File.dirname(__FILE__)) + '\partials\_footer.haml')).render()

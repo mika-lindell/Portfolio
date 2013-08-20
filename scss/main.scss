@@ -12,14 +12,14 @@
 // Copied its contents to _settings.scss instead
 //@import "../foundation/scss/foundation/variables";
 
+// Import global before settings for helpers to init. emCalc etc.
+@import "../foundation/scss/foundation/components/global";
+
 // Override foundation default variables where necessary
 @import "./partials/_settings.scss";
-// Import all custom styling
-@import "./partials/_custom.scss";
 
 // Foundation Components
 @import
-  "../foundation/scss/foundation/components/global",
   "../foundation/scss/foundation/components/grid",
   "../foundation/scss/foundation/components/visibility",
   //"../foundation/scss/foundation/components/block-grid",
@@ -56,3 +56,5 @@
   //"../foundation/scss/foundation/components/dropdown"
   ;
 
+// Import all custom styling
+@import "./partials/_custom.scss";
