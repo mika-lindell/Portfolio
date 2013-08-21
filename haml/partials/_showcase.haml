@@ -5,9 +5,10 @@
 				= title
 	.showcase-cover
 		%img.cover(src="./img/#{cover}" alt="#{cover_alt}" width="1920" height="300")
-	.row.showcase-info
-		.large-12.small-12.columns
-			%p.italic
-				= subtitle
-			.small.button.radius(href="#{url}")
-				Go to case study
+	- if !subtitle.empty?
+		.row.showcase-info
+			.large-12.small-12.columns
+				%p.italic
+					= subtitle
+				.small.button.radius(href="#{url}")
+					Go to case study

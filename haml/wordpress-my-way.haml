@@ -1,0 +1,32 @@
+!!! 5
+%html
+	- # This line includes header partial
+	- # Note the title-variable sent to partial
+	- args = {title: 'Wordpress, my way - Mika Lindell'}
+	= Haml::Engine.new(File.read(File.expand_path(File.dirname(__FILE__)) + '\partials\_header.haml')).render(Object.new, args)
+	%body	
+		- # This line includes top-menu partial
+		- args = {display_back: true}
+		= Haml::Engine.new(File.read(File.expand_path(File.dirname(__FILE__)) + '\partials\_menu_top.haml')).render(Object.new, args)
+		
+		%article
+			%header
+				- # Wordpress
+				- args = {title: "Wordpress, my way", subtitle: "", url: '', cover: 'wp_cover.jpg', cover_alt: 'Two Wordpress themes next to each other.'}
+				= Haml::Engine.new(File.read(File.expand_path(File.dirname(__FILE__)) + '\partials\_showcase.haml')).render(Object.new, args)
+			%section
+				.row.content
+					.small-12.large-12.columns
+						%p.ingress
+							Once I installed Wordpress for a first time, and didn't like what I saw: The default theme just didn't cut it. 
+							So, I made my own. The thing I learned is that I will not do it again. Unless I really have to. 
+							It can be constant uphill battle to fix some fundamentals of a good user experience. 
+							Yes, I'm looking at you hover-with-no-sense-of-location-or-state-menus.
+							Return for time invested is not that great.
+							The good thing is that after I have walked the walk, I know what to look for when on theme-shopping spree.
+						%p.alert-box.my-alert
+							%span.bold Attention reader:
+							This article was written 2012 in comparison for twenty-eleven, which has since been updated.
+							Though some of the points have been changed, some still apply.
+		- # This line includes footer partial
+		= Haml::Engine.new(File.read(File.expand_path(File.dirname(__FILE__)) + '\partials\_footer.haml')).render()

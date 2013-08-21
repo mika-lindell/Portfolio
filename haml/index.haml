@@ -17,7 +17,7 @@
 								Front end development.
 								%br
 								Design thinking.
-							%h2
+							%h2.italic
 								Interaction design and technical implementation
 								%br for web and mobile.
 								%br
@@ -29,29 +29,11 @@
 
 		- # Project showcase partials
 		- # Android
-		- args = {title: 'Motion controlled drum machine', subtitle: 'Proof of concept for Android phones, which spawned out of a school project. <br />When I work, I usually learn somethig new. This time it was the following: <br />If user already knows one action, use it to communicate the other.', url: 'motion-controlled-drum-machine.html', cover: 'android_cover.jpg', cover_alt: 'User interface work in progress.', video_id: 'KWU_2DXhRhc', elem_id: 'android-video' }
+		- args = {title: 'Motion controlled drum machine', subtitle: 'Proof of concept for Android phones, which spawned out of a school project. <br />When I work, I usually learn something new. This time it was the following: <br />If user already knows one action, use it to communicate the other.', url: 'motion-controlled-drum-machine.html', cover: 'android_cover.jpg', cover_alt: 'User interface work in progress.', video_id: 'KWU_2DXhRhc', elem_id: 'android-video' }
 		= Haml::Engine.new(File.read(File.expand_path(File.dirname(__FILE__)) + '\partials\_showcase_video.haml')).render(Object.new, args)
 		- # Wordpress
-		- args = {title: "Wordpress, my way", subtitle: "The default theme of Wordpress has problems, if you consider it from the perspective of interaction. <br />Since I'm a bit of a IT-handyman, I decided to make a theme of my own.", url: '#', cover: 'wp_cover.jpg', cover_alt: 'Two Wordpress themes next to each other.'}
+		- args = {title: "Wordpress, my way", subtitle: "The default theme of Wordpress has problems, if you consider it from the perspective of interaction. <br />Since I'm a bit of a IT-handyman, I decided to make a theme of my own.", url: 'wordpress-my-way.html', cover: 'wp_cover.jpg', cover_alt: 'Two Wordpress themes next to each other.'}
 		= Haml::Engine.new(File.read(File.expand_path(File.dirname(__FILE__)) + '\partials\_showcase.haml')).render(Object.new, args)
 
-		#profile.section-padding.bg-light-grey
-			.row
-				.large-12.small-12.columns
-					%h3
-						Who?
-			.row
-				.large-7.small-12.columns
-					%p
-						I go for simple and elegant solutions. For me, high quality is 
-						matter of principle. Though my strengths lie within interaction 
-						design and technical implementation, I know a little bit of 
-						everything. Thus, I can see things in a broader perspective. 
-					%p
-						I'm pretty good on my own, but at my best I'm when teamed 
-						up with talented people from other disciplines. 
-						I believe in team efforts.
-				.large-5.small-12.columns.hide-for-small
-					%img.right.tip-left(src="./img/profile.png" alt="Mika pointing at previous paragraph." width="300" height="220" data-tooltip data-options="disable-for-touch:true" data-width="250" title="On my free time I play Battlefield, jog or maybe go swimming. Sometimes I dare to read a book! I also do bunch of other stuff.")
 		- # This line includes footer partial
 		= Haml::Engine.new(File.read(File.expand_path(File.dirname(__FILE__)) + '\partials\_footer.haml')).render()
