@@ -6,15 +6,16 @@
 	= Haml::Engine.new(File.read(File.expand_path(File.dirname(__FILE__)) + '\partials\_header.haml')).render(Object.new, args)
 	%body	
 		- # This line includes top-menu partial
-		= Haml::Engine.new(File.read(File.expand_path(File.dirname(__FILE__)) + '\partials\_menu_top.haml')).render()
+		- args = {display_back: true}
+		= Haml::Engine.new(File.read(File.expand_path(File.dirname(__FILE__)) + '\partials\_menu_top.haml')).render(Object.new, args)
 		%article
-			%header
-				.showcase-cover
-					%img.cover(src="./img/wp_cover.jpg" alt="Two Wordpress themes next to each other." width="1920" height="300")
+			%header.showcase
 				.row.showcase-title
 					.large-12.small-12.columns
-						%h3
-							What's wrong with Wordpress?
+						%h3.strong
+							Wordpress, my way
+				.showcase-cover
+					%img.cover(src="./img/wp_cover.jpg" alt="Two Wordpress themes next to each other." width="1920" height="300")
 			%section.content
 				.row
 					.large-12.small-12.columns

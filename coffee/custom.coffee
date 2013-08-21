@@ -5,13 +5,15 @@ class videoTransitionEffects
 		@videoId = @element.data('video-id')
 		@expanded = false
 		@append = "
-			<div class='row' id='title-video-container'>
-				<div class='small-12 large-12 columns'>
-					<div class='video-centering'>
-						<div class='flex-video'>
-							<iframe allowfullscreen frameborder='0' src='http://www.youtube.com/embed/#{@videoId}?rel=0&amp;showinfo=0&amp;controls=1&amp;autoplay=1'>
-							</iframe>
-							<a class='close-video'><img src='./img/close.png' alt='Close' height='32' width='32' /></a>
+			<div id='title-video-container'>
+				<div class='row'>
+					<div class='small-12 large-12 columns'>
+						<div class='video-centering'>
+							<div class='flex-video'>
+								<iframe allowfullscreen frameborder='0' src='http://www.youtube.com/embed/#{@videoId}?rel=0&amp;showinfo=0&amp;controls=1&amp;autoplay=1'>
+								</iframe>
+								<a class='close-video'><img src='./img/close.png' alt='Close' height='32' width='32' /></a>
+							</div>
 						</div>
 					</div>
 				</div>

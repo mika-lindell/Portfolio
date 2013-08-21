@@ -1,11 +1,13 @@
-%a(href="#{url}")
-	.showcase-cover
-		%img.cover(src="./img/#{cover}" alt="#{cover_alt}." width="1920" height="300")
+%a.showcase.section-padding.border-top-light-grey(href="#{url}")
 	.row.showcase-title
 		.large-12.small-12.columns
-			%h3
+			%h3.strong
 				= title
-			%p
+	.showcase-cover
+		%img.cover(src="./img/#{cover}" alt="#{cover_alt}" width="1920" height="300")
+	.row.showcase-info
+		.large-12.small-12.columns
+			%p.italic
 				= subtitle
 			.small.button.radius(href="#{url}")
 				Go to case study

@@ -11,17 +11,16 @@
     <script src='lib/custom.modernizr.min.js'></script>
   </head>
   <body>
-    <header class='bg-dark-grey' id='top-bar'>
+    <header id='top-bar'>
       <div class='row'>
         <div class='large-12 small-12 columns'>
           <nav class='top-bar'>
             <ul class='title-area'>
               <li class='name'>
-                <h1>
+                <h1 class='strong'>
                   <a href='index.html'>
-                    <img alt='Mika Lindell' height='36' src='./img/logo.png' width='196'>
-                    <!-- %img.icon(src="./img/home.png" alt="Icon" width="25" height="25") -->
-                    <!-- Mika Lindell -->
+                    Mika Lindell
+                    <!-- %img(src="#{source}" alt="Mika Lindell" width="196" height="36") -->
                   </a>
                 </h1>
               </li>
@@ -30,67 +29,80 @@
         </div>
       </div>
     </header>
-    <div class='welcome bg-sky-blue'>
-      <div class='row'>
-        <div class='large-7 small-12 columns slogan'>
-          <h1>
-            Front end development.
-            <br>
-            Design thinking.
-          </h1>
-          <h2>
-            Interaction design and technical implementation
-            for web and mobile.
-            <br>
-            With an eye for what looks & runs beautiful.
-          </h2>
-        </div>
-        <div class='large-5 small-12 columns me'>
-          <div>
-            <img alt='Hi there! ( Mika smiling ;) ).' height='342' src='./img/welcome.png' width='475'>
+    <div class='welcome section-padding border-top-light-grey'>
+      <div class='bg-sky-blue'>
+        <div class='row'>
+          <div class='large-7 small-12 columns'>
+            <div class='slogan'>
+              <h1>
+                Front end development.
+                <br>
+                Design thinking.
+              </h1>
+              <h2>
+                Interaction design and technical implementation
+                <br>for web and mobile.</br>
+                <br>
+                With an eye for what looks & runs beautiful.
+              </h2>
+            </div>
+          </div>
+          <div class='large-5 small-12 columns hide-for-small me'>
+            <img alt="That's me and a smile." class='mugshot' height='342' src='./img/welcome.png' width='475'>
+            <img alt='Hi there!' class='hi-there' height='127' src='./img/hithere.png' width='148'>
             <div class='tip-left tip-hotspot' data-options='disable-for-touch:true' data-tooltip data-width='250' title="Yes, I sometimes smile at work. That's because I love what I'm doing!"></div>
           </div>
         </div>
       </div>
     </div>
-    <div class='showcase-cover toggle-video' data-video-id='KWU_2DXhRhc' id='android-video'>
-      <div class='video-cover'>
-        <img alt='User interface work in progress.' class='cover' height='300' src='./img/android_cover.jpg' width='1920'>
-        <img alt='Play a video.' class='play absolute-center' height='153' src='./img/play.png' width='152'>
+    <div class='showcase section-padding border-top-light-grey'>
+      <div class='row showcase-title'>
+        <div class='large-12 small-12 columns'>
+          <h3 class='strong'>
+            Motion controlled drum machine
+          </h3>
+        </div>
       </div>
-    </div>
-    <div class='row showcase-title'>
-      <div class='large-12 small-12 columns'>
-        <h3>
-          Motion controlled drum machine
-        </h3>
-        <p>
-          Proof of concept for Android phones
-        </p>
-        <div class='small button radius toggle-video'>
-          Watch the video
+      <div class='showcase-cover toggle-video' data-video-id='KWU_2DXhRhc' id='android-video'>
+        <div class='video-cover'>
+          <img alt='User interface work in progress.' class='cover' height='300' src='./img/android_cover.jpg' width='1920'>
+          <img alt='Play a video.' class='play absolute-center' height='153' src='./img/play.png' width='152'>
+        </div>
+      </div>
+      <div class='row showcase-info'>
+        <div class='large-12 small-12 columns'>
+          <p class='italic'>
+            Proof of concept for Android phones, which spawned out of a school project. <br />When I work, I usually learn somethig new. This time it was the following: <br />If user already knows one action, use it to communicate the other.
+          </p>
+          <div class='small button radius toggle-video'>
+            Watch the video
+          </div>
         </div>
       </div>
     </div>
-    <a href='whats-wrong-with-wordpress.html'>
-      <div class='showcase-cover'>
-        <img alt='Two Wordpress themes next to each other..' class='cover' height='300' src='./img/wp_cover.jpg' width='1920'>
-      </div>
+    <a class='showcase section-padding border-top-light-grey' href='#'>
       <div class='row showcase-title'>
         <div class='large-12 small-12 columns'>
-          <h3>
-            What's wrong with Wordpress?
+          <h3 class='strong'>
+            Wordpress, my way
           </h3>
-          <p>
-            I'm talking about its default theme to be specific
+        </div>
+      </div>
+      <div class='showcase-cover'>
+        <img alt='Two Wordpress themes next to each other.' class='cover' height='300' src='./img/wp_cover.jpg' width='1920'>
+      </div>
+      <div class='row showcase-info'>
+        <div class='large-12 small-12 columns'>
+          <p class='italic'>
+            The default theme of Wordpress has problems, if you consider it from the perspective of interaction. <br />Since I'm a bit of a IT-handyman, I decided to make a theme of my own.
           </p>
-          <div class='small button radius' href='whats-wrong-with-wordpress.html'>
+          <div class='small button radius' href='#'>
             Go to case study
           </div>
         </div>
       </div>
     </a>
-    <div class='bg-light-grey' id='profile'>
+    <div class='section-padding bg-light-grey' id='profile'>
       <div class='row'>
         <div class='large-12 small-12 columns'>
           <h3>
@@ -117,7 +129,7 @@
         </div>
       </div>
     </div>
-    <div class='bg-dark-grey' id='contact'>
+    <div class='section-padding bg-dark-grey' id='contact'>
       <div class='row'>
         <div class='large-12 small-12 columns'>
           <h3>
