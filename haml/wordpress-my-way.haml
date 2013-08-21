@@ -2,7 +2,7 @@
 %html
 	- # This line includes header partial
 	- # Note the title-variable sent to partial
-	- args = {title: 'Wordpress, my way - Mika Lindell'}
+	- args = {title: 'Wordpress, My Way - Mika Lindell'}
 	= Haml::Engine.new(File.read(File.expand_path(File.dirname(__FILE__)) + '\partials\_header.haml')).render(Object.new, args)
 	%body	
 		- # This line includes top-menu partial
@@ -10,10 +10,13 @@
 		= Haml::Engine.new(File.read(File.expand_path(File.dirname(__FILE__)) + '\partials\_menu_top.haml')).render(Object.new, args)
 		
 		%article
-			%header
-				- # Wordpress
-				- args = {title: "Wordpress, my way", subtitle: "", url: '', cover: 'wp_cover.jpg', cover_alt: 'Two Wordpress themes next to each other.'}
-				= Haml::Engine.new(File.read(File.expand_path(File.dirname(__FILE__)) + '\partials\_showcase.haml')).render(Object.new, args)
+			%header.showcase.section-padding.border-top-light-grey
+				.row.showcase-title
+					.large-12.small-12.columns
+						%h1.strong.heading-40
+							Wordpress, my way
+				.showcase-cover
+					%img.cover(src="./img/covers/wp_cover.jpg" alt="Two Wordpress themes next to each other." width="1920" height="300")
 			%section
 				.row.content
 					.small-12.large-12.columns
@@ -22,11 +25,56 @@
 							So, I made my own. The thing I learned is that I will not do it again. Unless I really have to. 
 							It can be constant uphill battle to fix some fundamentals of a good user experience. 
 							Yes, I'm looking at you hover-with-no-sense-of-location-or-state-menus.
-							Return for time invested is not that great.
+							Though I did get it done, return for time invested was not that great.
 							The good thing is that after I have walked the walk, I know what to look for when on theme-shopping spree.
 						%p.alert-box.my-alert
 							%span.bold Attention reader:
-							This article was written 2012 in comparison for twenty-eleven, which has since been updated.
-							Though some of the points have been changed, some still apply.
+							This article was written 2012 in comparison to twenty-eleven, the default theme at that time.
+							Though some of the points have been fixed in later iterations, some still apply.
+						%h3 Problem #1
+						%p
+							Menu doesn't indicate current location of user or indicator is ambigious.
+							%img(src="./img/content/p01.jpg")
+						%h3 Fix #1
+						%p
+							Tabbed menu allows users to better locate themselves in the hierarcy of the site.
+							%img(src="./img/content/f01.jpg")
+						%h3 Problem #2
+						%p
+							Navigation between articles is in the scope of all posts, though users may come through filtered listing.
+							%img(src="./img/content/p02.jpg")
+						%h3 Fix #2
+						%p
+							Recommendations help users to find new articles suggested by their interests. This can increase time single user spends on a website.
+							%img(src="./img/content/f02.jpg")
+						%h3 Problem #3
+						%p
+							Location and visualization of labels and buttons does not follow conventions and require extra effort to spot.
+							%img(src="./img/content/p03.jpg")
+						%h3 Fix #3
+						%p
+							Conventional placement and visualization of labels and buttons.
+							%img(src="./img/content/f03.jpg")
+						%h3 Problem #4
+						%p
+							Category listing doesn't stand out from other content. Coupled with the problem with menu, it's hard to locate yourself in the hierarchy of the website.
+							%img(src="./img/content/p04.jpg")
+						%h3 Fix #4
+						%p
+							Increased contrast between category details and other content.
+							%img(src="./img/content/f04.jpg")
+						%h3 Problem #5
+						%p
+							Category listing displays full articles, which makes it hard to scan all available content.
+							%img(src="./img/content/p05.jpg")
+						%h3 Fix #5
+						%p
+							Display thumbnail and excerpt from article in category listings. Browsing by category is more about finding interest. This helps users to get better and quicker overview of available content.
+							%img(src="./img/content/f05.jpg")
+
 		- # This line includes footer partial
 		= Haml::Engine.new(File.read(File.expand_path(File.dirname(__FILE__)) + '\partials\_footer.haml')).render()
+
+		- # Recommended
+		- args = {title: 'Motion controlled drum machine', subtitle: 'Proof of concept for Android phones, which spawned out of a school project. <br />When I work, I usually learn something new. This time it was the following: <br />If user already knows one action, use it to communicate the other.', url: 'motion-controlled-drum-machine.html', cover: 'android_cover.jpg', cover_alt: 'User interface work in progress.', video_id: 'KWU_2DXhRhc', elem_id: 'android-video' }
+		= Haml::Engine.new(File.read(File.expand_path(File.dirname(__FILE__)) + '\partials\_showcase_video.haml')).render(Object.new, args)

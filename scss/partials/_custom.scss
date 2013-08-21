@@ -34,7 +34,7 @@
 	text-transform:uppercase;
 }
 
-h3.strong{
+.heading-40{
 	font-size: emCalc(40);
 	margin-bottom: emCalc(3);
 }
@@ -59,9 +59,15 @@ body{overflow-x:hidden;}
 }
 
 .top-bar{
-	.name h1 a{
-		width: 100%;
-		padding: 0;
+	.name h2{
+		line-height: 80px;
+		font-size: emCalc(48);
+		margin: 0;
+		 a{
+		 		color: $_dark-grey;
+				width: 100%;
+				padding: 0;
+			}
 	}
 }
 .welcome{
