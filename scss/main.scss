@@ -2,7 +2,7 @@
 @charset "UTF-8";
 
 // Import Open Sans from google fonts
-@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400|Open+Sans+Condensed:700);
 
 // Browser reset
 @import "../foundation/scss/normalize.scss";
@@ -11,12 +11,12 @@
 // It's the default file, so I dare not to change it
 // Copied its contents to _settings.scss instead
 //@import "../foundation/scss/foundation/variables";
-
+// Override foundation default variables where necessary
+@import "./partials/_settings.scss";
 // Import global before settings for helpers to init. emCalc etc.
 @import "../foundation/scss/foundation/components/global";
 
-// Override foundation default variables where necessary
-@import "./partials/_settings.scss";
+
 
 // Foundation Components
 @import

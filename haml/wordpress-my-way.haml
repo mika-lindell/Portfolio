@@ -10,66 +10,65 @@
 		= Haml::Engine.new(File.read(File.expand_path(File.dirname(__FILE__)) + '\partials\_menu_top.haml')).render(Object.new, args)
 		
 		%article
-			%header.showcase.section-padding.border-top-light-grey
+			%header.section-padding.border-top-light-grey
 				.row.showcase-title
 					.large-12.small-12.columns
 						%h1.strong.heading-40
 							Wordpress, my way
-				.showcase-cover
-					%img.cover(src="./img/covers/wp_cover.jpg" alt="Two Wordpress themes next to each other." width="1920" height="300")
 			%section
 				.row.content
 					.small-12.large-12.columns
 						%p.ingress
 							Once I installed Wordpress for a first time, and didn't like what I saw: The default theme just didn't cut it. 
 							So, I made my own. The thing I learned is that I will not do it again. Unless I really have to. 
-							It can be constant uphill battle to fix some fundamentals of a good user experience. 
-							Yes, I'm looking at you hover-with-no-sense-of-location-or-state-menus.
+							It can be constant uphill battle to fix fundamentals of a good user experience.
 							Though I did get it done, return for time invested was not that great.
-							The good thing is that after I have walked the walk, I know what to look for when on theme-shopping spree.
+							The good thing is that after I have walked the walk, I know what to look for when on theme-shopping spree. This article is opionated.
 						%p.alert-box.my-alert
 							%span.bold Attention reader:
 							This article was written 2012 in comparison to twenty-eleven, the default theme at that time.
 							Though some of the points have been fixed in later iterations, some still apply.
-						%h3 Problem #1
+						%h3.regular 
+							%span.bold 1.
+							Menus
 						%p
-							Menu doesn't indicate current location of user or indicator is ambigious.
+							Ones location in the site hierarchy is indicated with a slightly bolder font on the item. On some cases your location is not detected at all. This can make it harder to create a mental model about the sites hierarchy and affects the sense of location. There is no indicator for a menu dropdown (like a small arrow), which makes it harder to understand all available options before further exploring.
 							%img(src="./img/content/p01.jpg")
-						%h3 Fix #1
+						%h4.regular.subheader My fix
 						%p
-							Tabbed menu allows users to better locate themselves in the hierarcy of the site.
+							Tabbed menu allows users to better locate themselves in the hierarcy of the site. Dropdown items are displayed on a single row below the currently selected tab, which makes it also accessible for touch devices.
 							%img(src="./img/content/f01.jpg")
-						%h3 Problem #2
+						%h3.regular 
+							%span.bold 2.
+							Single article template
 						%p
-							Navigation between articles is in the scope of all posts, though users may come through filtered listing.
+							This is a deadend. Only way to discover new content is by using next/previous links or by tags, which are not very visible feature in the user interface. One can't see what's lying beneath these links, which can reduce the amount of new content found through an impulse. All in all there is no simple way of finding related content to this article, and no way to find it without further page loads.
 							%img(src="./img/content/p02.jpg")
-						%h3 Fix #2
+						%h4.regular.subheader My fix
 						%p
-							Recommendations help users to find new articles suggested by their interests. This can increase time single user spends on a website.
+							Recommendations help users to find new articles suggested by their interests in a simple and effortless way. As this is an element with high contrast due to pictures, its more likely to catch ones eye. A solution like this can increase time single visitor spends on a website.
 							%img(src="./img/content/f02.jpg")
-						%h3 Problem #3
+						%h3.regular 
+							%span.bold 3.
+							Forms
 						%p
 							Location and visualization of labels and buttons does not follow conventions and require extra effort to spot.
 							%img(src="./img/content/p03.jpg")
-						%h3 Fix #3
+						%h4.regular.subheader My fix
 						%p
 							Conventional placement and visualization of labels and buttons.
 							%img(src="./img/content/f03.jpg")
-						%h3 Problem #4
+						%h3.regular 
+							%span.bold 4.
+							Category-page
 						%p
-							Category listing doesn't stand out from other content. Coupled with the problem with menu, it's hard to locate yourself in the hierarchy of the website.
+							Category details doesn't stand out from other content. This is the only visual piece, which differentiates this view from the view on front page. Coupled with the problem with menu poorly indicating your location, it's easy to get confused about your whereabouts in the hierarchy of the site.
 							%img(src="./img/content/p04.jpg")
-						%h3 Fix #4
-						%p
-							Increased contrast between category details and other content.
-							%img(src="./img/content/f04.jpg")
-						%h3 Problem #5
-						%p
-							Category listing displays full articles, which makes it hard to scan all available content.
 							%img(src="./img/content/p05.jpg")
-						%h3 Fix #5
+						%h4.regular.subheader My fix
 						%p
-							Display thumbnail and excerpt from article in category listings. Browsing by category is more about finding interest. This helps users to get better and quicker overview of available content.
+							Increased contrast between category details and other content to clearly differentiate category-page from frontpage. As it is more about browsing content, only thumbnails and excerpts are displayed instead of full articles. This will make it easier to get a good overview of a category content. It also further differentiates category-page from frontpage. 
+							%img(src="./img/content/f04.jpg")
 							%img(src="./img/content/f05.jpg")
 
 		- # This line includes footer partial

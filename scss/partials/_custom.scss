@@ -45,8 +45,9 @@
 .bold{
 	font-weight: bold;
 }
-
-body{overflow-x:hidden;}
+.regular{
+	font-weight: normal;
+}
 
 .absolute-center{
 	position: absolute;
@@ -100,7 +101,7 @@ body{overflow-x:hidden;}
 			position: absolute;
 			max-width: none;
 			bottom: emCalc(200);
-			left: emCalc(350);
+			left: emCalc(340);
 		}
 		.mugshot{
 			position: absolute;
@@ -119,6 +120,9 @@ body{overflow-x:hidden;}
 	.showcase-cover{
 		position: relative;
 		height: emCalc(300);
+
+		width: 100%;
+		overflow-x: hidden;
 		.video-cover{
 			position: absolute;
 			height: emCalc(300);
@@ -182,9 +186,10 @@ body{overflow-x:hidden;}
 	margin-bottom: emCalc(70);
 }
 .ingress{
-	margin: emCalc(20) 0;
-	font-style: italic;
-	font-size: emCalc(22);
+	margin: emCalc(20) 0 emCalc(50) 0;
+	font-style: oblique;
+	font-size: emCalc(23);
+	font-weight: 300;
 }
 
 #contact, #profile{

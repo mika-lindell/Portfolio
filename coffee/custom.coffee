@@ -1,8 +1,9 @@
 
 class videoTransitionEffects
-	constructor: (@element) ->
+	constructor: (@videoId) ->
+		@element = $('#place-' + @videoId)
+		console.log(@element)
 		@cover = @element.children('.video-cover')
-		@videoId = @element.data('video-id')
 		@expanded = false
 		@append = "
 			<div id='title-video-container'>
@@ -12,18 +13,20 @@ class videoTransitionEffects
 							<div class='flex-video'>
 								<iframe allowfullscreen frameborder='0' src='http://www.youtube.com/embed/#{@videoId}?rel=0&amp;showinfo=0&amp;controls=1&amp;autoplay=1'>
 								</iframe>
-								<a class='close-video'><img src='./img/close.png' alt='Close' height='32' width='32' /></a>
 							</div>
+							<a class='close-video'><img src='./img/close.png' alt='Close' height='32' width='32' /></a>
 						</div>
 					</div>
 				</div>
 			</div>"
 		@classExpanded = 'cover-expanded'
 		@classCollapsed = 'cover-collapsed'
-		
+
+	videoId: @videoId
 
 	toggle: () ->
 
+		console.log('toggle')
 		if @expanded
 			newOpacity = 1
 		else
@@ -47,9 +50,6 @@ class videoTransitionEffects
 # End Class videoTransitionEffects
 
 # Bind video toggling to these elements
-video = new videoTransitionEffects $('#android-video')
+video = new videoTransitionEffects 'KWU_2DXhRhc'
+$('.toggle-video-KWU_2DXhRhc').click(()-> video.toggle())
 
-bindThese = $('.toggle-video')
-for item in bindThese
-	console.log(item)
-	item.onclick = () -> video.toggle()
