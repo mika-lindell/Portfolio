@@ -180,7 +180,6 @@
 	}
 }
 
-
 .content{
 	margin-top: emCalc(-70); /* this negates the margin created by .showcase */
 	margin-bottom: emCalc(70);
@@ -191,7 +190,13 @@
 	font-size: emCalc(23);
 	font-weight: 300;
 }
-
+.text-block{
+	margin: emCalc(80) 0 0 0;
+	img{
+		margin: emCalc(25) 0;
+		border: emCalc(1) solid #d0e3f0;
+	}
+}
 #contact, #profile{
 	padding-top: emCalc(80);
 	padding-bottom: emCalc(80);
