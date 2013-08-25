@@ -60,7 +60,7 @@
                 Menus
               </h3>
               <p>
-                Ones location in the site hierarchy is indicated with a slightly bolder font on the item. On some cases your location is not detected at all. This can make it harder to create a mental model about the sites hierarchy and affects the sense of location. There is no indicator for a menu dropdown (like a small arrow), which makes it harder to discover existence of dropdown menus.
+                Location in the site hierarchy is indicated with a slightly bolder font on the item, which is hard to detect. This can make it difficult to create a mental model about sites hierarchy and can affect the sense of location. Data displayed in dropdown is only available by hovering over a item. This means it's not accessible with touch devices. There is no indicator for a submenu (like a small arrow), which can make it harder to discover items with a dropdown.
                 <img src='./img/content/p01.jpg'>
               </p>
               <h4 class='regular subheader'>My fix</h4>
@@ -84,40 +84,56 @@
                 <img src='./img/content/f02.jpg'>
               </p>
             </div>
+            <!-- .text-block -->
+            <!-- %h3.regular -->
+            <!-- %span.bold 3 -->
+            <!-- Forms -->
+            <!-- %p -->
+            <!-- Location and visualization of labels and buttons does not follow conventions and require extra effort to spot. -->
+            <!-- %img(src="./img/content/p03.jpg") -->
+            <!-- %h4.regular.subheader My fix -->
+            <!-- %p -->
+            <!-- Conventional placement and visualization of labels and buttons. -->
+            <!-- %img(src="./img/content/f03.jpg") -->
             <div class='text-block'>
               <h3 class='regular'>
                 <span class='bold'>3</span>
-                Forms
-              </h3>
-              <p>
-                Location and visualization of labels and buttons does not follow conventions and require extra effort to spot.
-                <img src='./img/content/p03.jpg'>
-              </p>
-              <h4 class='regular subheader'>My fix</h4>
-              <p>
-                Conventional placement and visualization of labels and buttons.
-                <img src='./img/content/f03.jpg'>
-              </p>
-            </div>
-            <div class='text-block'>
-              <h3 class='regular'>
-                <span class='bold'>4</span>
                 Category-page
               </h3>
               <p>
-                Category details doesn't stand out from other content. This is the only visual piece, which differentiates this view from the view on front page. Coupled with the problem with menu poorly indicating your location, it's easy to get confused about your whereabouts in the hierarchy of the site.
+                Category title and description does not stand out from other content. This is the only visual piece, which differentiates this view from the view on the front page. Coupled with the problem with menu poorly indicating your location, it's easy to get confused about your whereabouts in the hierarchy of the site.
                 <img src='./img/content/p04.jpg'>
-                <img src='./img/content/p05.jpg'>
               </p>
               <h4 class='regular subheader'>My fix</h4>
               <p>
                 Increased contrast between category details and other content to better communicate your current location. As it is more about browsing content, only thumbnails and excerpts are displayed instead of full articles. This will make it easier to get a good overview of a category content. It also further differentiates category-page from frontpage.
                 <img src='./img/content/f04.jpg'>
-                <img src='./img/content/f05.jpg'>
               </p>
             </div>
           </div>
         </div>
+        <footer class='section-padding border-top-light-grey'>
+          <a href='index.html#video-KWU_2DXhRhc'>
+            <div class='row'>
+              <div class='small-12 large-12 columns'>
+                <h4 class='regular'>
+                  Recommended:
+                </h4>
+              </div>
+            </div>
+            <div class='row'>
+              <div class='small-12 large-10 columns'>
+                <img class='left floated' src='./img/covers/recommended/android.jpg'>
+                <h4 class='strong text-justify'>
+                  Motion controlled drum machine
+                </h4>
+                <p class='text-dark-grey'>
+                  Proof of concept for Android phones, which spawned out of a school project. When I work, I usually learn something new. This time it was the following: If user already knows one action, use it to communicate the other.
+                </p>
+              </div>
+            </div>
+          </a>
+        </footer>
       </section>
     </article>
     <div class='section-padding bg-light-grey' id='profile'>
@@ -182,30 +198,5 @@
     <script>
       $(document).foundation();
     </script>
-    <div class='showcase section-padding border-top-light-grey'>
-      <div class='row showcase-title'>
-        <div class='large-12 small-12 columns' id='video-KWU_2DXhRhc'>
-          <h3 class='strong heading-40'>
-            Motion controlled drum machine
-          </h3>
-        </div>
-      </div>
-      <div class='showcase-cover toggle-video-KWU_2DXhRhc' id='place-KWU_2DXhRhc'>
-        <div class='video-cover'>
-          <img alt='User interface work in progress.' class='cover' height='300' src='./img/covers/android_cover.jpg' width='1920'>
-          <img alt='Play a video.' class='play absolute-center' height='153' src='./img/play.png' width='152'>
-        </div>
-      </div>
-      <div class='row'>
-        <div class='large-12 small-12 columns showcase-info'>
-          <p class='italic'>
-            Proof of concept for Android phones, which spawned out of a school project. <br />When I work, I usually learn something new. This time it was the following: <br />If user already knows one action, use it to communicate the other.
-          </p>
-          <a class='button radius small toggle-video-KWU_2DXhRhc' href='#video-KWU_2DXhRhc'>
-            Watch the video
-          </a>
-        </div>
-      </div>
-    </div>
   </body>
 </html>

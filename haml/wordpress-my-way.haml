@@ -33,7 +33,7 @@
 								%span.bold 1 
 								Menus
 							%p
-								Ones location in the site hierarchy is indicated with a slightly bolder font on the item. On some cases your location is not detected at all. This can make it harder to create a mental model about the sites hierarchy and affects the sense of location. There is no indicator for a menu dropdown (like a small arrow), which makes it harder to discover existence of dropdown menus.
+								Location in the site hierarchy is indicated with a slightly bolder font on the item, which is hard to detect. This can make it difficult to create a mental model about sites hierarchy and can affect the sense of location. Data displayed in dropdown is only available by hovering over a item. This means it's not accessible with touch devices. There is no indicator for a submenu (like a small arrow), which can make it harder to discover items with a dropdown.
 								%img(src="./img/content/p01.jpg")
 							%h4.regular.subheader My fix
 							%p
@@ -50,34 +50,42 @@
 							%p
 								Recommendations help users to find new articles suggested by their interests in a simple and effortless way. As this is an element with high contrast due to pictures, its more likely to catch ones eye. A solution like this can increase time single visitor spends on a website.
 								%img(src="./img/content/f02.jpg")
+						/.text-block
+						/	%h3.regular 
+						/		%span.bold 3 
+						/		Forms
+						/	%p
+						/		Location and visualization of labels and buttons does not follow conventions and require extra effort to spot.
+						/		%img(src="./img/content/p03.jpg")
+						/	%h4.regular.subheader My fix
+						/	%p
+						/		Conventional placement and visualization of labels and buttons.
+						/		%img(src="./img/content/f03.jpg")
 						.text-block
 							%h3.regular 
-								%span.bold 3 
-								Forms
-							%p
-								Location and visualization of labels and buttons does not follow conventions and require extra effort to spot.
-								%img(src="./img/content/p03.jpg")
-							%h4.regular.subheader My fix
-							%p
-								Conventional placement and visualization of labels and buttons.
-								%img(src="./img/content/f03.jpg")
-						.text-block
-							%h3.regular 
-								%span.bold 4 
+								%span.bold 3
 								Category-page
 							%p
-								Category details doesn't stand out from other content. This is the only visual piece, which differentiates this view from the view on front page. Coupled with the problem with menu poorly indicating your location, it's easy to get confused about your whereabouts in the hierarchy of the site.
+								Category title and description does not stand out from other content. This is the only visual piece, which differentiates this view from the view on the front page. Coupled with the problem with menu poorly indicating your location, it's easy to get confused about your whereabouts in the hierarchy of the site.
 								%img(src="./img/content/p04.jpg")
-								%img(src="./img/content/p05.jpg")
 							%h4.regular.subheader My fix
 							%p
 								Increased contrast between category details and other content to better communicate your current location. As it is more about browsing content, only thumbnails and excerpts are displayed instead of full articles. This will make it easier to get a good overview of a category content. It also further differentiates category-page from frontpage. 
 								%img(src="./img/content/f04.jpg")
-								%img(src="./img/content/f05.jpg")
+				%footer.section-padding.border-top-light-grey
+					%a(href="index.html#video-KWU_2DXhRhc")
+						.row
+							.small-12.large-12.columns
+								%h4.regular
+									Recommended:
+						.row
+							.small-12.large-10.columns
+								%img.left.floated(src="./img/covers/recommended/android.jpg")
+
+								%h4.strong.text-justify
+									Motion controlled drum machine
+								%p.text-dark-grey
+									Proof of concept for Android phones, which spawned out of a school project. When I work, I usually learn something new. This time it was the following: If user already knows one action, use it to communicate the other.
 
 		- # This line includes footer partial
 		= Haml::Engine.new(File.read(File.expand_path(File.dirname(__FILE__)) + '\partials\_footer.haml')).render()
-
-		- # Recommended
-		- args = {title: 'Motion controlled drum machine', subtitle: 'Proof of concept for Android phones, which spawned out of a school project. <br />When I work, I usually learn something new. This time it was the following: <br />If user already knows one action, use it to communicate the other.', url: 'motion-controlled-drum-machine.html', cover: 'android_cover.jpg', cover_alt: 'User interface work in progress.', video_id: 'KWU_2DXhRhc', elem_id: 'android-video' }
-		= Haml::Engine.new(File.read(File.expand_path(File.dirname(__FILE__)) + '\partials\_showcase_video.haml')).render(Object.new, args)
