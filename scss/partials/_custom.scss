@@ -26,9 +26,20 @@
  color: darken(#f2dede, 50%);
 }
 
+.my-notification{
+ @include alert(#d9edf7);
+ font-weight: normal;
+ color: darken(#d9edf7, 50%);
+ ul{padding: emCalc(10) 0 0 emCalc(25)}
+}
+
 .section-padding{
 	padding-top: emCalc(90);
 	padding-bottom: emCalc(90);
+}
+
+.small-no-padding-top{
+	padding-top: 0;
 }
 
 .strong{
@@ -42,6 +53,10 @@
 	margin-bottom: emCalc(3);
 }
 
+.left.floated {
+	margin: emCalc(12) emCalc(20) emCalc(20) 0;
+}
+
 .italic{
 	font-style: italic;
 }
@@ -51,6 +66,8 @@
 .regular{
 	font-weight: normal;
 }
+
+.no-overflow-x{overflow-x: hidden;}
 
 .absolute-center{
 	position: absolute;
@@ -75,9 +92,10 @@
 	}
 }
 .welcome{
-
+	width: 100%;
 	.slogan{
-	 	padding-top: emCalc(60);
+	 	padding-top: emCalc(20);
+	 	padding-bottom: emCalc(20);
 		h1, h2{
 			font-weight: normal;
 		}
@@ -189,7 +207,7 @@
 .ingress{
 	margin: emCalc(20) 0 emCalc(50) 0;
 	font-style: oblique;
-	font-size: emCalc(23);
+	font-size: emCalc(18);
 	font-weight: 300;
 }
 .text-block{
@@ -198,9 +216,6 @@
 		margin: emCalc(25) 0;
 		border: emCalc(1) solid #d0e3f0;
 	}
-}
-.left.floated {
-	margin: emCalc(12) emCalc(20) emCalc(20) 0;
 }
 
 #contact, #profile{
@@ -231,4 +246,22 @@
 .recommended
 {
 	padding: emCalc(10) 0;
+}
+
+/* Used to alter styles for screens at least 768px wide. This is where the grid changes. */
+@media #{$small} {
+
+	.small-no-padding-top{
+		padding-top: emCalc(90);
+	}
+
+	.welcome{
+		.slogan{
+		 	padding-top: emCalc(60);
+		 }
+	}
+
+	.ingress{
+		font-size: emCalc(23);
+	}
 }
