@@ -20,6 +20,7 @@
 .text-dark-grey{
 	color: $_dark-grey;
 }
+
 .my-alert{
  @include alert(#f2dede);
  font-weight: normal;
@@ -34,8 +35,8 @@
 }
 
 .section-padding{
-	padding-top: emCalc(90);
-	padding-bottom: emCalc(90);
+	padding-top: emCalc(45);
+	padding-bottom: emCalc(45);
 }
 
 .small-no-padding-top{
@@ -54,7 +55,8 @@
 }
 
 .left.floated {
-	margin: emCalc(12) emCalc(20) emCalc(20) 0;
+	margin: emCalc(10) emCalc(20) emCalc(5) 0;
+	vertical-align: top;
 }
 
 .italic{
@@ -201,8 +203,8 @@
 }
 
 .content{
-	margin-top: emCalc(-70); /* this negates the margin created by .showcase */
-	margin-bottom: emCalc(70);
+	margin-top: emCalc(-35); /* this negates the margin created by .showcase */
+	margin-bottom: emCalc(35);
 }
 .ingress{
 	margin: emCalc(20) 0 emCalc(50) 0;
@@ -211,7 +213,7 @@
 	font-weight: 300;
 }
 .text-block{
-	margin: emCalc(80) 0 0 0;
+	margin: emCalc(40) 0 0 0;
 	img{
 		margin: emCalc(25) 0;
 		border: emCalc(1) solid #d0e3f0;
@@ -219,8 +221,6 @@
 }
 
 #contact, #profile{
-	padding-top: emCalc(80);
-	padding-bottom: emCalc(80);
 	input[type="email"], textarea{
 		color: black;
 	}
@@ -251,6 +251,11 @@
 /* Used to alter styles for screens at least 768px wide. This is where the grid changes. */
 @media #{$small} {
 
+	.section-padding{
+		padding-top: emCalc(90);
+		padding-bottom: emCalc(90);
+	}
+
 	.small-no-padding-top{
 		padding-top: emCalc(90);
 	}
@@ -261,7 +266,16 @@
 		 }
 	}
 
+	.content{
+		margin-top: emCalc(-70); /* this negates the margin created by .showcase */
+		margin-bottom: emCalc(70);
+	}
 	.ingress{
 		font-size: emCalc(23);
 	}
+	.text-block{
+		margin: emCalc(80) 0 0 0;
+	}
+
+
 }
