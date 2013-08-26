@@ -69,7 +69,7 @@
 	font-weight: normal;
 }
 
-.no-overflow-x{overflow-x: hidden;}
+.no-overflow-x{overflow-x: hidden;overflow-x: visible;}
 
 .absolute-center{
 	position: absolute;
@@ -227,7 +227,12 @@
 	}
 }
 
-#profile img{margin-top: emCalc(-25);}
+#profile img{
+	position: absolute;
+	bottom: emCalc(-90);
+	right: emCalc(-50);
+	margin-top: emCalc(-25);
+}
 
 #contact{
 	.contact-buttons{
