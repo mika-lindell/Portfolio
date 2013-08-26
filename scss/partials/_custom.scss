@@ -39,7 +39,7 @@
 	padding-bottom: emCalc(45);
 }
 
-.small-no-padding-top{
+.no-padding-top{
 	padding-top: 0;
 }
 
@@ -82,6 +82,7 @@
 }
 
 .top-bar{
+	margin-bottom: emCalc(5);
 	.name h2{
 		line-height: 80px;
 		font-size: emCalc(48);
@@ -109,7 +110,7 @@
 	.me{
 		text-align: center;
 		position: relative;
-		height: emCalc(400);
+		height: emCalc(420);
 		/*height: emCalc(342);*/
 		.tip-hotspot{
 			position: absolute;
@@ -256,8 +257,8 @@
 		padding-bottom: emCalc(90);
 	}
 
-	.small-no-padding-top{
-		padding-top: emCalc(90);
+	.no-padding-top{
+		padding-top: emCalc(0);
 	}
 
 	.welcome{

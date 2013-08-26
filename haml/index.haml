@@ -8,7 +8,8 @@
 		- # This line includes top-menu partial
 		- args = {display_back: false}
 		= Haml::Engine.new(File.read(File.expand_path(File.dirname(__FILE__)) + '\partials\_menu_top.haml')).render(Object.new, args)
-		%div.welcome.section-padding.small-no-padding-top.border-top-light-grey.no-overflow-x
+		
+		%article.welcome.section-padding.no-padding-top.no-overflow-x
 			.bg-sky-blue
 				.row
 					.large-7.small-12.columns
@@ -32,7 +33,7 @@
 		- args = {title: 'Motion controlled drum machine', subtitle: 'Proof of concept for Android phones, which spawned out of a school project. When I work, I usually learn something new. This time it was the following: If user already knows one action, use it to communicate the other.', url: 'motion-controlled-drum-machine.html', cover: 'android_cover.jpg', cover_alt: 'User interface work in progress.', video_id: 'KWU_2DXhRhc'}
 		= Haml::Engine.new(File.read(File.expand_path(File.dirname(__FILE__)) + '\partials\_showcase_video.haml')).render(Object.new, args)
 		- # Wordpress
-		- args = {title: "Wordpress, my way", subtitle: "The default theme of Wordpress has problems, if you consider it from the perspective of interaction. Since I'm a bit of a IT-handyman, I decided to make a theme of my own.", url: 'wordpress-my-way.html', cover: 'wp_cover.jpg', cover_alt: 'Two Wordpress themes next to each other.'}
+		- args = {title: "Wordpress, my way", subtitle: "The default theme for Wordpress has problems, if you consider it from the perspective of interaction. Since I'm a bit of a IT-handyman, I decided to make a theme of my own.", url: 'wordpress-my-way.html', cover: 'wp_cover.jpg', cover_alt: 'Two Wordpress themes next to each other.'}
 		= Haml::Engine.new(File.read(File.expand_path(File.dirname(__FILE__)) + '\partials\_showcase.haml')).render(Object.new, args)
 
 		- # This line includes footer partial
