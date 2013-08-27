@@ -6,6 +6,6 @@
 					%li.name
 						%h2.strong
 							%a(href="index.html")
+								- if display_back
+									%img(src="./img/back.png" alt="Back" width="45" height="80")
 								Mika Lindell
-								- source = if display_back then './img/logo_back.png' else'./img/logo.png' end
-								/%img(src="#{source}" alt="Mika Lindell" width="196" height="36")

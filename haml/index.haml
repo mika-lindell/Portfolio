@@ -24,7 +24,7 @@
 								%br
 								With an eye for what looks & runs beautiful.
 					.large-5.small-12.columns.hide-for-small.me
-						%img.mugshot(src="./img/welcome.png" alt="That's me and a smile." width="475" height="342")
+						%img.mugshot(src="./img/welcome.png" alt="That's me and a smile." width="550" height="380")
 						%img.hi-there(src="./img/hithere.png" alt="Hi there!" width="148" height="127")
 						%div.tip-left.tip-hotspot(data-tooltip data-options="disable-for-touch:true" data-width="250" title="Yes, I sometimes smile at work. That's because I love what I'm doing!")
 
@@ -33,7 +33,7 @@
 		- args = {title: 'Motion controlled drum machine', subtitle: 'Proof of concept for Android phones, which spawned out of a school project. When I work, I usually learn something new. This time it was the following: If user already knows one action, use it to communicate the other.', url: 'motion-controlled-drum-machine.html', cover: 'android_cover.jpg', cover_alt: 'User interface work in progress.', video_id: 'KWU_2DXhRhc'}
 		= Haml::Engine.new(File.read(File.expand_path(File.dirname(__FILE__)) + '\partials\_showcase_video.haml')).render(Object.new, args)
 		- # Wordpress
-		- args = {title: "Wordpress, my way", subtitle: "The default theme for Wordpress has problems, if you consider it from the perspective of interaction. Since I'm a bit of a IT-handyman, I decided to make a theme of my own.", url: 'wordpress-my-way.html', cover: 'wp_cover.jpg', cover_alt: 'Two Wordpress themes next to each other.'}
+		- args = {title: "Wordpress, my way", subtitle: "The default theme for Wordpress has problems, if you consider it from the perspective of interaction. Since I'm a bit of a IT-handyman, I decided to make a theme of my own.", url: 'wordpress-my-way.html', cover: 'wp_cover.jpg', cover_alt: 'Two Wordpress themes next to each other.', button: 'Go to case study'}
 		= Haml::Engine.new(File.read(File.expand_path(File.dirname(__FILE__)) + '\partials\_showcase.haml')).render(Object.new, args)
 
 		- # This line includes footer partial

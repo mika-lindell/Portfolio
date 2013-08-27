@@ -85,7 +85,7 @@
 	margin-bottom: emCalc(5);
 	.name h2{
 		line-height: 80px;
-		font-size: emCalc(48);
+		font-size: emCalc(40);
 		margin: 0;
 		 a{
 		 		color: $_dark-grey;
@@ -131,7 +131,7 @@
 			position: absolute;
 			max-width: none;
 	  	left: 50%;
-	  	margin-left: emCalc(-232);
+	  	margin-left: emCalc(-275);
 	  	bottom: 0px;
 		}
 	}
@@ -266,6 +266,11 @@
 		padding-top: emCalc(0);
 	}
 
+	.top-bar{
+		.name h2{
+			font-size: emCalc(48);
+		}
+	}
 	.welcome{
 		.slogan{
 		 	padding-top: emCalc(60);
