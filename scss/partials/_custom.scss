@@ -146,7 +146,8 @@
 		height: emCalc(300);
 
 		width: 100%;
-		overflow-x: hidden;
+		overflow: hidden;
+
 		.video-cover{
 			position: absolute;
 			height: emCalc(300);
@@ -170,8 +171,9 @@
 				}
 			}
 			.close-video{
+				display: none;
 				position: absolute;
-				right: emCalc(5);
+				right: emCalc(20);
 				top: emCalc(5);
 				z-index: 99;
 			}
@@ -288,5 +290,14 @@
 		margin: emCalc(80) 0 0 0;
 	}
 
+	.showcase{
+		.showcase-cover{
+			#title-video-container{
+				.close-video{
+					display: block;
+				}
+			}
+		}
+	}
 
 }
