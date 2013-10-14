@@ -162,6 +162,11 @@
 
 		.title-video-container{
 			background-color: #FFF;
+			background-image:url('../img/loader_42x42.gif');
+			background-repeat:no-repeat;
+			background-attachment:fixed;
+			background-position:center; 
+
 			.video-centering{
 				//max-width: emCalc(786);
 				margin:auto;
