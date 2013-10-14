@@ -1,15 +1,20 @@
 .showcase.section-padding
 	.row.showcase-title
-		.large-12.small-12.columns(id="video-#{video_id}")
+		.large-12.small-12.columns(id="anchor-#{video_id}")
 			%h3.strong.heading-40
 				= title
-	.row.showcase-cover(id="place-#{video_id}" class="toggle-video-#{video_id}")
-		.video-cover
-			%img.cover(src="./img/covers/#{cover}" alt="#{cover_alt}" width="970" height="300")
+	.row.showcase-cover(id="container-#{video_id}" class="toggle-video-#{video_id}")
+		.video-cover(id="cover-#{video_id}")
+			%img.cover(src="./img/covers/#{cover}" data-interchange="[./img/covers/large/#{cover}, (small)]" alt="#{cover_alt}" width="970" height="300")
 			%img.play.absolute-center(src="./img/play.png" alt="Play a video." width="152" height="153")
+		.title-video-container
+			.row
+				.small-12.large-12.columns
+					.video-centering
+						.flex-video(id="append-#{video_id}")
 	.row
 		.large-9.small-12.columns.showcase-info
 			%p.text-dark-grey
 				= subtitle
-			%a.small.button.radius(href="#video-#{video_id}" class="toggle-video-#{video_id}")
+			%a.small.button.radius(id="button-#{video_id}" href="#anchor-#{video_id}" class="toggle-video-#{video_id}")
 				Watch the video

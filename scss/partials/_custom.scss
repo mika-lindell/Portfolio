@@ -160,23 +160,23 @@
 		  margin-left: emCalc(-485);
 		}
 
-		#title-video-container{
-			background-color: #000;
+		.title-video-container{
+			background-color: #FFF;
 			.video-centering{
-				max-width: emCalc(786);
+				//max-width: emCalc(786);
 				margin:auto;
 				.flex-video{
 					overflow: visible;
 					margin-bottom: emCalc(1);
 				}
 			}
-			.close-video{
+			/*.close-video{
 				display: none;
 				position: absolute;
 				right: emCalc(20);
 				top: emCalc(5);
 				z-index: 99;
-			}
+			}*/
 		}
 	}
 
@@ -292,7 +292,7 @@
 
 	.showcase{
 		.showcase-cover{
-			#title-video-container{
+			.title-video-container{
 				.close-video{
 					display: block;
 				}

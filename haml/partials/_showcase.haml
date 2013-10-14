@@ -5,7 +5,7 @@
 				= title
 	.row.showcase-cover
 		%a(href="#{url}")
-			%img.cover(src="./img/covers/#{cover}" alt="#{cover_alt}" width="970" height="300")
+			%img.cover(src="./img/covers/#{cover}" data-interchange="[./img/covers/large/#{cover}, (small)]" alt="#{cover_alt}" width="970" height="300")
 	- if !subtitle.empty?
 		.row
 			.large-9.small-12.columns.showcase-info

@@ -1,51 +1,45 @@
-
 class videoTransitionEffects
 	constructor: (@videoId) ->
-		@element = $('#place-' + @videoId)
-		console.log(@element)
-		@cover = @element.children('.video-cover')
+		@container = $("#container-#{@videoId}")
+		@cover = $("#cover-#{@videoId}")
+		@button = $("#button-#{@videoId}")
+
+		@appendTo = $("#append-#{@videoId}")
+		@appendSrc = "<iframe allowfullscreen frameborder='0' src='http://www.youtube.com/embed/#{@videoId}?rel=0&amp;showinfo=0&amp;controls=1&amp;autoplay=1'>"
+
 		@expanded = false
-		@append = "
-			<div id='title-video-container'>
-				<div class='row'>
-					<div class='small-12 large-12 columns'>
-						<div class='video-centering'>
-							<div class='flex-video'>
-								<iframe allowfullscreen frameborder='0' src='http://www.youtube.com/embed/#{@videoId}?rel=0&amp;showinfo=0&amp;controls=1&amp;autoplay=1'>
-								</iframe>
-							</div>
-							<a class='close-video'><img src='./img/close.png' alt='Close' height='32' width='32' /></a>
-						</div>
-					</div>
-				</div>
-			</div>"
+
 		@classExpanded = 'cover-expanded'
 		@classCollapsed = 'cover-collapsed'
 
-	videoId: @videoId
+	toggle: ()->
 
-	toggle: () ->
-
-		console.log('toggle')
 		if @expanded
 			newOpacity = 1
 		else
 			newOpacity = 0
 
-		@cover.animate(opacity: newOpacity, 'fast', ()->)
+		@cover.animate(opacity: newOpacity, 'fast')
 
-		if not @expanded
-			this.switchClass(@classExpanded, @classCollapsed)
-			@element.append(@append)
+		if @expanded
+			@switchClass(@classCollapsed, @classExpanded)
+			@button.removeClass('secondary')
+			@button.text('Watch the video')
+			@appendTo.empty()
 		else
-			@element.children('#title-video-container').remove()
-			this.switchClass(@classCollapsed, @classExpanded)
-
+			@appendTo.append(@appendSrc)
+			@switchClass(@classExpanded, @classCollapsed)
+			@button.addClass('secondary')
+			@button.text('Hide the video')
+			
 		@expanded = !@expanded
 
+		$('html,body').animate({scrollTop: $("#anchor-#{@videoId}").offset().top},'fast');
+
 	switchClass: (add, remove) ->
-			@element.addClass(add)
-			@element.removeClass(remove)
+
+		@container.addClass(add)
+		@container.removeClass(remove)
 
 # End Class videoTransitionEffects
 
